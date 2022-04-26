@@ -1,0 +1,13 @@
+.debug{
+    border:1 px solid black;
+}
+
+
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(#009688, #dbdbd3);
+}
+
+
+
