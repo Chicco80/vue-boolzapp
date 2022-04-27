@@ -171,7 +171,27 @@ const app = new Vue({
         message:''
     },
     methods:{
+        guardaChat(index){
+            this.activeContactIndex = index;
+        },
+        spedisci(){
+            const newMex = {
+                date: '10/02/2021 15:30:55',
+                message: this.message,
+                status: 'sent'
+            };
+            const risp ={
+                date: '10/02/2021 15:30:55',
+                message: 'Benissimo',
+                status: 'received'
 
+            }
+        this.contacts[this.activeContactIndex].messages.push(newMex);
+        this.message = '';
+        setTimeout(()=>{
+            this.contacts[this.activeContactIndex].messages.push(risp);;
+         },3000)
+        }
     }
 });
 
