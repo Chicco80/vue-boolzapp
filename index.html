@@ -23,54 +23,71 @@
     <title>Document</title>
 </head>
 <body>
-  <div id="app" class=" container mt-5 d-flex">
-    <aside class="debug">
-      <div class="contImgText debug d-flex justify-content-between align-items-center">
-        <div class="contImg">
-          <img src="img/avatar_io.jpg" alt="">
-          <span>Sofia</span>
-        </div>
-       
-        <div class="icons">
-          <i class=" fa-solid fa-circle-notch"></i>
-          <i class=" fa-solid fa-message"></i>
-          <i class=" fa-solid fa-ellipsis-vertical"></i>
-        </div>
-      </div>
-      <div class="row debug">
-        <div class="col-2" >
-          <i class="bell fa-solid fa-bell-slash"></i>
-        </div>
-        <div class="col-10">
-          <div class="col-10 justify-content-start">
-            <div>Ricevi notifiche di nuovi messaggi</div>
-            <a href="#">Attiva notifiche desktop</a>
+  <div id="app" class=" container mt-5">
+   <div class="row align-item-stretch g-0">
+       <div class="col-4 bg-light h-100">
+           <div class="header d-flex justify-content-between align-items-center p-2">
+               <div class="img-cont ">
+                   <img src="img/avatar_io.jpg" alt="">
+                   <span>Sofia</span>
+               </div>
+               <div class="icons ">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+               </div>
            </div>
+           <div class="notifiche d-flex align-items-center">
+               <div class="bell">
+                   <i class="fa-solid fa-bell-slash"></i>
+               </div>
+               <div class="text ms-3 pt-2">
+                   <P>Ricevi notifiche per i tuoi messaggi</P>
+                   <p>Attiva notifiche desktop</p>
+               </div>
+           </div>
+           <div class="search d-flex align-items-center">
+            <div class="input-group">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+              </div>
+           </div>
+           <div class="users">
+            <ul class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-start align-items-center">
+                        <img class="rounded-circle" src="img/avatar_2.jpg" alt="avatar_2">
+                        <span>cghsdvc</span>
+                  <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+                </li>
+                </ul>
+            </div>
+       </div>
+       <div class="col-8 bg-light h-100">
+        <div class="header d-flex justify-content-between align-items-center p-2">
+            <div class="img-cont ">
+                <img src="img/avatar_1.jpg" alt="Avatar-1">
+                <span>Michele</span>
+            </div>
+            <div class="icons ">
+                 <i class="fa-solid fa-circle-notch"></i>
+                 <i class="fa-solid fa-message"></i>
+                 <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
         </div>
-        <div class="row search debug justify-content-center">
-          <div class="input-group ">
-            <button class="btn btn-outline-secondary" type="button">
-              <i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
-          </div>
-
-      </div>
-     
-    </aside>
-    <main class="debug">
-      <div class="contImgText debug d-flex justify-content-between align-items-center">
-        <div class="contImg">
-          <img src="img/avatar_1.jpg" alt="">
-          <span>Michele</span>
+        <div class="mex-container">
+            <div class="message-text sent">cwcwwcw</div>
+            <div class="message-text received">ccwcww</div>
         </div>
+        <div class="footer d-flex justify-content-start align-items-center">
+            <input class="form-control" type="text" >
+        </div>
+           
+       </div>
+      
        
-        <div class="icons">
-          <i class=" fa-solid fa-circle-notch"></i>
-          <i class=" fa-solid fa-message"></i>
-          <i class=" fa-solid fa-ellipsis-vertical"></i>
-        </div>
-      </div>
-    </main>
+   </div>
+   
   </div>
   <script src="js/script.js"></script>
 </body>
