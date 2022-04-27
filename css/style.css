@@ -1,10 +1,12 @@
 body{
-    height: 100vh;
-    background-image: linear-gradient(#009688 20%, #dbdbd3 80%);
+    background-image: linear-gradient(#009688 , #dbdbd3);
+    /* height: 100vh; */
+   
 }
 
-.app{
+#app{
     height: 100vh;
+    
 }
 .debug{
     border: 1px solid black;
@@ -26,20 +28,20 @@ height: 70px;
 .bell{
     font-size: 30px;
 }
- .users{
-     height: calc(100% - 190px);
-     overflow-y:auto
+ .contacts{
+     height: calc(100vh - 238px);
+     overflow-y:auto;
  }
- .users li img{
+ .contacts li img{
      width:50px;
      margin-right:10px;
  }
- .users ul{
+ .contacts ul{
      list-style-type: none;
  }
 
  .mex-container{
-     height: calc(100% - 140px);
+     height: calc(100vh - 188px);
      width: 100%;
      background-image:url(../img/mine.jpg) ;
      overflow-y: auto;
@@ -64,8 +66,12 @@ height: 70px;
      float: left;
      clear: both;
  }
+ .contacts li.list-group-item.active{
+     background-color: #cecece;
+ }
 
  .footer{
      height: 70px;
+     padding: 10px;
 
  }
