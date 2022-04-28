@@ -176,12 +176,12 @@ const app = new Vue({
         },
         spedisci(){
             const newMex = {
-                date: '10/02/2021 15:30:55',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.message,
                 status: 'sent'
             };
             const risp ={
-                date: '10/02/2021 15:30:55',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: 'Benissimo',
                 status: 'received'
 
@@ -191,6 +191,15 @@ const app = new Vue({
         setTimeout(()=>{
             this.contacts[this.activeContactIndex].messages.push(risp);;
          },3000)
+        },
+        filterContact(){
+            this.contacts.forEach((contact)=>{
+                if(contact.name.toLowerCase().includes(this.searchText)){
+                    contact.visible = true;
+                }else{
+                    contact.visible = false;
+                }
+            })
         }
     }
 });
