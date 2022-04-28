@@ -74,9 +74,9 @@
                 <div class="col-8 bg-light h-100">
                     <div class="header d-flex justify-content-between align-items-center p-2">
                         <div class="img-cont d-flex ">
-                            <img class="rounded-circle" src="img/avatar_1.jpg" alt="Avatar-1">
+                            <img class="rounded-circle" :src=" 'img/avatar'+ contacts[activeContactIndex].avatar +'.jpg'" alt="Avatar-1">
                                 <div class="accesso ms-2">
-                                    <span class="fw-bold ">Michele</span>
+                                    <span class="fw-bold ">{{contacts[activeContactIndex].name}}</span>
                                     <p>Ultimo accesso</p>
                                 </div>      
                         </div>
@@ -87,9 +87,17 @@
                         </div>
                     </div>
                     <div class="mex-container">
-                        <div class="message-text"
+                        <div class="message-text "
                         v-for="(item, index) in contacts[activeContactIndex].messages " :key="index" :class="item.status === 'sent' ? 'sent': 'received'">
-                            <span>{{item.message}}</span>
+                            
+                            <div class="d-flex justify-content-between">
+                                <span>{{item.message}}</span>
+                                <i class=" open fa-solid fa-caret-down text-end" >
+                                    <ul class="show">
+                                        <li><p>cancella messaggio</p></li>
+                                    </ul>
+                                </i>
+                            </div>
                             <p class="fs-6 text-end">{{item.date}}</p>
                         </div>
                     </div>
