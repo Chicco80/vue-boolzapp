@@ -199,7 +199,13 @@ const app = new Vue({
                 }else{
                     contact.visible = false;
                 }
+
             })
+        },
+        removeMex(){
+            if(this.contacts[this.activeContactIndex].messages.length > 0){
+                this.contacts[this.activeContactIndex].messages.pop(this.message)
+            }else return;
         }
        
     }
